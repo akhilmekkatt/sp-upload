@@ -1,7 +1,15 @@
-# sp-upload
-sp-upload
-Usage:
-You can use this module in other parts of your Node.js application as follows:
+# Description:
+
+The SharePoint File Upload Module is a Node.js library designed to streamline the process of uploading files to SharePoint document libraries. This module offers a simple and reusable solution for integrating file upload functionality into Node.js applications targeting SharePoint environments.
+
+## Key Features:
+
+* Simplified Integration: Easily incorporate file upload capabilities into Node.js projects interacting with SharePoint.
+* Flexible Configuration: Customizable settings for SharePoint site URL, library name, and access token.
+* Error Handling: Robust error handling to ensure smooth operation and clear feedback on upload failures.
+* Encapsulation: Class-based structure encapsulates SharePoint file upload functionality for reusability and maintainability.
+* Dependencies: Utilizes Axios for HTTP requests and fs module for file operations.
+
 ```
 const SharePointFileUploader = require('sp-upload');
 
@@ -23,8 +31,11 @@ uploader.uploadFile(filePath, fileName)
     .catch((error) => {
         console.error(error);
     });
+
 ```
 
-Remember to replace 'https://your-sharepoint-site.com', 'YourLibraryName', and 'YOUR_ACCESS_TOKEN' with your actual SharePoint site URL, library name, and access token respectively.
+Contributing: Contributions are welcome! Feel free to fork the repository, make enhancements, and submit pull requests.
 
-This basic module uses Axios for making HTTP requests and the fs module to read the file content. It encapsulates the SharePoint file upload functionality, allowing you to reuse it across your Node.js application.
+License: This project is licensed under the MIT License.
+
+Issues: Report any issues or suggestions by creating an issue.
