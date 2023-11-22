@@ -11,7 +11,7 @@ The SharePoint File Upload Module is a Node.js library designed to streamline th
 - Dependencies: Utilizes Axios for HTTP requests and fs module for file operations.
 
 ```
-const SharePointFileUploader = require('./index');
+const SharePointFileUploader = require('sp-upload');
 
 // SharePoint credentials and details
 const username = 'your_username';
