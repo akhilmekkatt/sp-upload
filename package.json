@@ -1,7 +1,7 @@
 {
-  "name": "sp-upload",
+  "name": "@akhilmekkatt/sp-upload",
   "version": "1.0.0",
-  "description": "",
+  "description": "The SharePoint File Upload Module is a Node.js library designed to streamline the process of uploading files to SharePoint document libraries. This module offers a simple and reusable solution for integrating file upload functionality into Node.js applications targeting SharePoint environments.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,6 +12,16 @@
   "dependencies": {
     "axios": "^1.6.2",
     "fs": "^0.0.1-security",
+    "node-sp-auth": "^3.0.7",
     "path": "^0.12.7"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akhilmekkatt/sp-upload.git"
+  },
+  "bugs": {
+    "url": "https://github.com/akhilmekkatt/sp-upload/issues"
+  },
+  "homepage": "https://github.com/akhilmekkatt/sp-upload#readme"
 }

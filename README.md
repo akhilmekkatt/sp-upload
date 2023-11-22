@@ -4,33 +4,40 @@ The SharePoint File Upload Module is a Node.js library designed to streamline th
 
 ## Key Features:
 
-* Simplified Integration: Easily incorporate file upload capabilities into Node.js projects interacting with SharePoint.
-* Flexible Configuration: Customizable settings for SharePoint site URL, library name, and access token.
-* Error Handling: Robust error handling to ensure smooth operation and clear feedback on upload failures.
-* Encapsulation: Class-based structure encapsulates SharePoint file upload functionality for reusability and maintainability.
-* Dependencies: Utilizes Axios for HTTP requests and fs module for file operations.
+- Simplified Integration: Easily incorporate file upload capabilities into Node.js projects interacting with SharePoint.
+- Flexible Configuration: Customizable settings for SharePoint site URL, library name, and access token.
+- Error Handling: Robust error handling to ensure smooth operation and clear feedback on upload failures.
+- Encapsulation: Class-based structure encapsulates SharePoint file upload functionality for reusability and maintainability.
+- Dependencies: Utilizes Axios for HTTP requests and fs module for file operations.
 
 ```
-const SharePointFileUploader = require('sp-upload');
+const SharePointFileUploader = require('./index');
 
-// Replace with your SharePoint details and access token
+// SharePoint credentials and details
+const username = 'your_username';
+const password = 'your_password';
 const siteUrl = 'https://your-sharepoint-site.com';
 const libraryName = 'YourLibraryName';
-const accessToken = 'YOUR_ACCESS_TOKEN';
 
-const uploader = new SharePointFileUploader(siteUrl, libraryName, accessToken);
+// Create an instance of the uploader
+const uploader = new SharePointFileUploader(username, password, siteUrl, libraryName);
 
-// Example usage: Upload a file
-const filePath = '/path/to/your/file.txt';
-const fileName = 'file.txt';
+// Array of file details (file paths and names)
+const files = [
+    { filePath: '/path/to/your/file1.txt', fileName: 'file1.txt' },
+    { filePath: '/path/to/your/file2.txt', fileName: 'file2.txt' },
+    // Add more files as needed
+];
 
-uploader.uploadFile(filePath, fileName)
-    .then((result) => {
-        console.log(result);
+// Example usage: Upload multiple files
+uploader.uploadFiles(files)
+    .then(() => {
+        console.log('Files uploaded successfully');
     })
     .catch((error) => {
-        console.error(error);
+        console.error('Upload failed:', error);
     });
+
 
 ```
 
